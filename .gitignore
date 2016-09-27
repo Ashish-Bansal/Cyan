@@ -1,2 +1,5 @@
-url_short.py
-KEYS
+*.pyc
+.idea/
+*.DS_Store
+__pycache__
+api_keys.json
