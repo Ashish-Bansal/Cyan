@@ -1,4 +1,6 @@
 {
   "GoogleUrlShortener" : "ENTER_YOUR_API_SECRET_HERE",
+  "GoogleCustomSearch" : "ENTER_YOUR_API_SECRET_HERE",
+  "GoogleCustomSearchEngineId" : "ENTER_YOUR_ENGINE_ID_HERE",
   "TelegramBotToken" : "ENTER_YOUR_API_SECRET_HERE"
 }

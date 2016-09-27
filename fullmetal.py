@@ -43,6 +43,10 @@ def main():
     url_shortner_handler = MessageHandler([url_shortner.filter], url_shortner.handler)
     dispatcher.add_handler(url_shortner_handler)
 
+    google_search = GoogleSearch(logger)
+    google_search_handler = MessageHandler([google_search.filter], google_search.handler)
+    dispatcher.add_handler(google_search_handler)
+
     start = Start(logger)
     start_handler = CommandHandler('start', start.handler)
     dispatcher.add_handler(start_handler)
