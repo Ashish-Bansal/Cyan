@@ -12,7 +12,7 @@ class GoogleSearch:
     # Based on 1-index
     START = 1
     API_KEY_NAME = 'GoogleCustomSearch'
-    API_SECRET = 'https://www.googleapis.com/urlshortener/v1/url?key=' + getValueFromJson(API_KEY_NAME)
+    API_SECRET = getValueFromJson(API_KEY_NAME)
     CUSTOM_SEARCH_ENGINE_ID_NAME = "GoogleCustomSearchEngineId"
     CUSTOM_SEARCH_ENGINE_ID = getValueFromJson(CUSTOM_SEARCH_ENGINE_ID_NAME)
     RESULT_COUNT = 5
