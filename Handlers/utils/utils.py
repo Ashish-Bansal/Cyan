@@ -55,3 +55,34 @@ def getValueFromJson(key_name):
     abs_json_filepath = os.path.join(script_dir, JSON_FILENAME)
     values = json.loads(open(abs_json_filepath).read())
     return values[key_name]
+
+
+def leaveGroup(bot, chat_id):
+    bot.leaveChat(chat_id)
+
+
+def kickFromGroup(bot, chat_id, user_id):
+    bot_id = bot.id
+    if isAdmin(bot, chat_id, bot_id):
+        bot.kickChatMember(chat_id, user_id)
+        return True
+    else:
+        return False
+
+
+def unbanFromGroup(bot, chat_id, user_id):
+    bot_id = bot.id
+    if isAdmin(bot, chat_id, bot_id):
+        bot.unbanChatMember(chat_id, user_id)
+        return True
+    else:
+        return False
+
+
+def isAdmin(bot, chat_id, user_id):
+    chat_member = bot.getChatMember(chat_id, user_id)
+    status = chat_member.status
+    if status.lower() == "administrator":
+        return True
+    else:
+        return False
