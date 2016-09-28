@@ -51,6 +51,10 @@ def main():
     start_handler = CommandHandler('start', start.handler)
     dispatcher.add_handler(start_handler)
 
+    user_info = UserInfo(logger)
+    user_info_handler = CommandHandler('info', user_info.handler)
+    dispatcher.add_handler(user_info_handler)
+
     unknown = Unknown(logger)
     unknown_handler = MessageHandler([Filters.command], unknown.handler)
     dispatcher.add_handler(unknown_handler)

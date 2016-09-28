@@ -8,3 +8,4 @@ from start import Start
 from unknown import Unknown
 from say import Say
 from utils import *
+from user_info import UserInfo
